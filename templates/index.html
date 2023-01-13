@@ -1,0 +1,51 @@
+<!DOCTYPE html>      
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<!----    <title>Hello from Flask</title>
+    {% if price_dict %}
+      <h1>Hello {{ price_dict }}!</h1>
+    {% else %}
+      <h1>Hello, World!</h1>
+    {% endif %} -->
+
+<h2>Product Information</h2>
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Date</th>
+    </tr>
+    {% for item in price_dict %}
+    <tr>
+        <td>{{ item['name'] }}</td>
+        <td>{{ item['price'] }}</td>
+        <td>{{ item['date'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+</body>
+</html>
+
